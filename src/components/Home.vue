@@ -47,7 +47,7 @@
               <div class="media-content">
                 <div class="content">
                   <small>Running Activity</small>
-                  <div class="columns is-mobile">
+                  <div class="columns is-mobile" style="width: 100%;">
                     <div class="column">
                       <strong>5.00 <span style="font-size: 10px;">km.</span></strong>
                     </div>
@@ -95,4 +95,5 @@
   export default {
     name: 'app-home'
   }
+
 </script>

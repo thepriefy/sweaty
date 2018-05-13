@@ -19,18 +19,30 @@
         <!--</a>-->
         <!--</div>-->
         <div class="navbar-end">
-          <a class="navbar-item" href="https://bulma.io/">
+          <a class="navbar-item" href="#" @click="showLogin = true">
             Login
           </a>
         </div>
       </div>
     </nav>
+
+    <modal-login v-show="showLogin" @close="showLogin = false"></modal-login>
   </div>
 </template>
 
 <script>
+  import ModalLogin from './ModalLogin.vue'
+
   export default {
-    name: 'TheHeader'
+    name: 'TheHeader',
+    components: {
+      ModalLogin: ModalLogin
+    },
+    data: function(){
+      return {
+        showLogin: false
+      }
+    }
   }
 
   /* toggle hamburger menu */
